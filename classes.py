@@ -1,29 +1,25 @@
-class MyTetsClass:
+# define the Vehicle class
+class Vehicle:
+    name = ""
+    kind = "car"
+    color = ""
+    value = 100.00
+    def description(self):
+        desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
+        return desc_str
+# your code goes here
 
-    num_of_users = 0
-    age_in_2016 = -5
+car1 = Vehicle()
+car1.name = "Ferrari"
+car1.color = "red"
+car1.kind = "convertible"
+car1.value = 122000.00
 
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-        self.fullinfo='My name ' + self.name + ', age ' + '.'
-        MyTetsClass.num_of_users += 1
-
-    def about_me(self):
-        print(self.fullinfo)
-        return self.fullinfo
-
-    def what_age_in_2016(self):
-        self.age = int(self.age + self.age_in_2016)
-        print(self.age)
-
-info = MyTetsClass("Bogdan", 20)
-info1 = MyTetsClass("Max", 12)
-info2 = MyTetsClass("Taras", 29)
-
-info.what_age_in_2016()
-info1.what_age_in_2016()
-info2.what_age_in_2016()
-
-print('Лічильник обєктів = ' + str(MyTetsClass.num_of_users))
-
+car2 = Vehicle()
+car2.name = "Tesla"
+car2.color = "white"
+car2.kind = "sedan"
+car2.value = 34000.00
+# test code
+print(car1.description())
+print(car2.description())
