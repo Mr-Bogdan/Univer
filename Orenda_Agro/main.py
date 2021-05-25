@@ -281,6 +281,7 @@ class CreateUser:
         except sqlite3.Error as error:
             print("Помилка при роботі з БД", error)
 
+
 # клас навігація для користувача
 class User:
     # функція оренди транспорту
@@ -423,20 +424,20 @@ class Admin:
             print("Помилка при роботі з БД", error)
 
     # видалення даних по id
-    @classmethod
-    def remove_by_id(cls):
-        cls.id = int(input("Введіть id по якому хочете видалити транспорт: "))
+    @staticmethod
+    def remove_by_id():
+        id = int(input("Введіть id по якому хочете видалити транспорт: "))
         try:
             connect = get_connection()
             curs = connect.cursor()
             print("Підключення успішне")
-            curs.execute('SELECT id FROM agro_technics WHERE id = ?', (cls.id,))
+            curs.execute('SELECT id FROM agro_technics WHERE id = ?', (id,))
             data = curs.fetchall()
             if not data:
                 print("Техніка з таким id не знайдена")
             else:
                 curs.execute(
-                    'DELETE FROM agro_technics WHERE id = ?', (cls.id,))
+                    'DELETE FROM agro_technics WHERE id = ?', (id,))
                 connect.commit()
                 print("Дані видалено успішно")
 
@@ -444,20 +445,20 @@ class Admin:
             print("Помилка при роботі з БД", error)
 
     # видалення даних по agro_id
-    @classmethod
-    def remove_by_agro_id(cls):
-        cls.agro_id = int(input("Введіть agro_id по якому хочете видалити транспорт:"))
+    @staticmethod
+    def remove_by_agro_id():
+        agro_id = int(input("Введіть agro_id по якому хочете видалити транспорт:"))
         try:
             connect = get_connection()
             curs = connect.cursor()
             print("Підключення успішне")
-            curs.execute('SELECT agro_id FROM agro_technics WHERE agro_id = ?', (cls.agro_id,))
+            curs.execute('SELECT agro_id FROM agro_technics WHERE agro_id = ?', (agro_id,))
             data = curs.fetchall()
             if not data:
                 print("Техніка з таким agro_id не знайдена")
             else:
                 curs.execute(
-                    'DELETE FROM agro_technics WHERE agro_id = ?', (cls.agro_id,))
+                    'DELETE FROM agro_technics WHERE agro_id = ?', (agro_id,))
                 connect.commit()
                 print("Дані видалено успішно")
 
@@ -465,20 +466,20 @@ class Admin:
             print("Помилка при роботі з БД", error)
 
     # видалення даних по name
-    @classmethod
-    def remove_by_name(cls):
-        cls.name = input("Введіть name по якому хочете видалити транспорт: ")
+    @staticmethod
+    def remove_by_name():
+        name = input("Введіть name по якому хочете видалити транспорт: ")
         try:
             connect = get_connection()
             curs = connect.cursor()
             print("Підключення успішне")
-            curs.execute('SELECT name FROM agro_technics WHERE name = ?', (cls.name,))
+            curs.execute('SELECT name FROM agro_technics WHERE name = ?', (name,))
             data = curs.fetchall()
             if not data:
                 print("Техніка з таким name не знайдена")
             else:
                 curs.execute(
-                    'DELETE FROM agro_technics WHERE name = ?', (cls.name,))
+                    'DELETE FROM agro_technics WHERE name = ?', (name,))
                 connect.commit()
                 print("Дані видалено успішно")
 
