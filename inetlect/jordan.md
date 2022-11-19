@@ -24,20 +24,10 @@
 <fake@example.com>
 
 ![Dead sea](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dead_Sea%2C_Jordan_01.jpg/800px-Dead_Sea%2C_Jordan_01.jpg)
+
 %%HTML
-<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-jo" viewBox="0 0 640 480">
-  <defs>
-    <clipPath id="a">
-      <path fill-opacity=".7" d="M-117.8 0h682.6v512h-682.6z"/>
-    </clipPath>
-  </defs>
-  <g clip-path="url(#a)" transform="translate(110.5) scale(.9375)">
-    <g fill-rule="evenodd" stroke-width="1pt">
-      <path d="M-117.8 0h1024v170.7h-1024z"/>
-      <path fill="#fff" d="M-117.8 170.7h1024v170.6h-1024z"/>
-      <path fill="#090" d="M-117.8 341.3h1024V512h-1024z"/>
-      <path fill="red" d="m-117.8 512 512-256-512-256v512z"/>
-      <path fill="#fff" d="m24.5 289 5.7-24.9H4.7l23-11-15.9-19.9 23 11 5.6-24.8 5.7 24.9L69 233.2l-16 19.9 23 11H50.6l5.7 24.9-15.9-20z"/>
-    </g>
-  </g>
+<svg version="1.1" baseProfile="full" width="300" height="150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="50" fill="orange" />
+  <circle cx="150" cy="75" r="25" stroke="blue" stroke-width="1" fill="white" />
+  <rect width="100%" height="50" y="100" fill="green" />
 </svg>
