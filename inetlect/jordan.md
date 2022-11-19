@@ -24,7 +24,7 @@
 <fake@example.com>
 
 ![Dead sea](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dead_Sea%2C_Jordan_01.jpg/800px-Dead_Sea%2C_Jordan_01.jpg)
-
+%%HTML
 <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-jo" viewBox="0 0 640 480">
   <defs>
     <clipPath id="a">
